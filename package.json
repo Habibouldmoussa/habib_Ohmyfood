@@ -4,7 +4,7 @@
   "description": "ohmyfood entreprise de commande de repas en ligne ",
   "main": "index.js",
   "scripts": {
-    "sass" : "sass --watch sass/main.sass:css/style.css"
+    "sass": "sass --watch sass/main.scss:css/style.css"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io/issues"
   },
-  "homepage": "https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io#readme"
+  "homepage": "https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io#readme",
+  "dependencies": {
+    "normalize-scss": "^7.0.1"
+  }
 }
