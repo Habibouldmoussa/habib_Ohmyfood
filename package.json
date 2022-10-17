@@ -1,0 +1,24 @@
+{
+  "name": "habib_ohmyfood",
+  "version": "1.0.0",
+  "description": "ohmyfood entreprise de commande de repas en ligne ",
+  "main": "index.js",
+  "scripts": {
+    "sass" : "sass --watch sass/main.sass:css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io.git"
+  },
+  "keywords": [
+    "ohmyfood",
+    "commande",
+    "repas"
+  ],
+  "author": "Habib OULDMOUSSA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io/issues"
+  },
+  "homepage": "https://github.com/Habibouldmoussa/habib_Ohmyfood.github.io#readme"
+}
