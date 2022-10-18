@@ -1,10 +1,56 @@
-header {
+header {      
+    text-align: center;
 
-    figure {
-       width: 60%;
-       margin: auto;                
+    .logo {
+        img {
+            width: 45%;
+            margin: 10px;
+        }
     }
-    .logo {        
-        width: 70%;      
+
+    .research {
+        background-color: lighten($color_gris, 5%);
+
+        i {
+            position: relative;
+            top: -37px;
+            left: -87px;
+        }
+
+        &__input {
+            width: 100%;
+            border: 0px;
+            background-color: $color_gris;
+            height: 50px;
+            box-shadow: 0 4px 4px 0px darken($color_gris, 20%) inset;
+            text-align: center;
+
+            &::placeholder {
+                color: black;
+                font-weight: bolder;
+                font-size: $size_x1;
+            }
+
+        }
+
+        &__title {
+            margin: 0px $space;
+            font-size: $size_x2 ;
+            font-weight: 900;
+            
+         }
+
+        &__descreption {
+            background-color: lighten($color_gris, 5%);
+            padding: calc($space/2)  ;
+        }
+        
+        &__text {          
+            font-size: medium;
+        }
+
+        &__button {
+            margin: calc($space/2) 0px;
+        }
     }
 }
