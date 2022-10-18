@@ -1,0 +1,22 @@
+// @mixin mq($mq-breakpoint,$mq-breakpoints: $breakpoints) {
+//     $mq-breakpoint: map-get($mq-breakpoints, $mq-breakpoint);
+//     @media screen and (min-width: #{$mq-breakpoint}) {
+//         @content;
+//       }
+// }
+@mixin md($breakpoint) {
+    @each $breakpoints, $size in $media {
+        @if $breakpoint==$breakpoints {
+            @media screen and (min-width: $size) {
+                @content;
+            }
+        }
+    }
+}
+@mixin shadow {        
+    box-shadow:  4px 4px 15px 0px darken($color_gris, 25%);
+}
+
+@mixin gardient($dgr) {        
+    background: linear-gradient($dgr, $color_secondery 0%, $color_premary 100%); 
+}
