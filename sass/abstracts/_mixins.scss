@@ -31,4 +31,7 @@
     @if ($cot =="bas") {
         border-radius: 0 0 $rad $rad ;
     }
+    @if ($cot =="right") {
+        border-radius: 0 $rad $rad 0 ;
+    }
 }

@@ -1,14 +1,13 @@
-header {
+.header {
     text-align: center;
-
-    .logo {
+    &__logo {
         img {
             width: 45%;
             margin: $spaceV;
         }
     }
 
-    .research {
+    .research {        
         background-color: lighten($color_gris, 5%); //#F7F7F7
 
         i {
@@ -43,7 +42,7 @@ header {
 
         &__descreption {
             background-color: lighten($color_gris, 5%); //#F7F7F7 
-            padding: $space/2;
+            padding: calc($space/2);
         }
 
         &__text {
@@ -51,7 +50,22 @@ header {
         }
 
         &__button {
-            margin: $space/2 0px;
+            margin: calc($space/2) 0px;
         }
+    }
+    &__cover {
+        overflow: hidden;
+        height: 250px;
+        img{
+            object-fit: cover;
+            width: 100%;
+        }
+    }    
+    &__nav {
+        position:absolute;
+        display: inline;
+        left:calc($space/2); 
+        top:$spaceV;                   
+        font-size: $size_vw;
     }
 }

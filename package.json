@@ -4,8 +4,8 @@
   "description": "ohmyfood entreprise de commande de repas en ligne ",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch sass/main.scss:css/style.css",
-    "prefix": "postcss css/style.css --use autoprefixer -d css/prefixed/"
+    "sass": "sass --watch sass/main.scss:sass/css/style.css",
+    "prefix": "postcss sass/css/style.css --use autoprefixer -d css/prefixed/"
   },
   "repository": {
     "type": "git",

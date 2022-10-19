@@ -1,0 +1,57 @@
+.menu-post {
+    @include shadow(20px);
+    @include radius(15px);
+    margin: $spaceV 0;
+    line-height: $spaceV*2.0;
+    padding: $spaceV calc($space/2);
+    font-size: calc($size_x1/1.2);
+    position: relative;
+    @include md(large) {
+        padding: $spaceV calc($space/4);
+    }
+
+    label {
+        display: flex;
+        flex-flow: row wrap
+    }
+
+    &__title {
+        margin: 0;
+        width: 80%;
+        font-weight: 900;
+    }
+
+    &__text {
+        margin: 0;
+        width: 80%;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    &__prix {
+        font-weight: 900;
+    }
+
+    &--select {
+        position: absolute;        
+        background-color: $color_tertiary;        
+        color:white;
+        padding: $spaceV*2;
+        top:0;
+        right:0;
+        @include radius(15px, right)
+    }
+
+    &--select:not(:checked) {
+        opacity: 0;
+    }
+
+    &__check {        
+        display: none;
+
+        &:checked+label .menu-post--select {
+            opacity: 1;
+        }
+    }
+}

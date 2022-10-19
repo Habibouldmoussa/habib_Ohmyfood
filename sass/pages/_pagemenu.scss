@@ -1,0 +1,59 @@
+.menu-main {
+    background-color: lighten($color_gris, 5%);
+
+}
+
+.menu {
+    position: relative;
+    background-color: lighten($color_gris, 5%);
+    @include radius($spaceV*4, "haut");
+    padding: $spaceV calc($space/2);
+    top: -$spaceV*5;
+
+    &__resto {
+        display: inline-block;
+        font-family: Shrikhand;
+        width: 85%;
+        margin: $spaceV 0;
+    }
+
+    &>i {
+        font-size: $size_x2;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-flow: column;
+        
+        @include md(large){
+            flex-flow: row wrap;
+        }
+    }
+
+    section {
+        display: flex;
+        flex-flow: column;        
+        @include md(large){
+            width: 30%;
+            margin-left : calc($space/4); 
+        }
+    }
+
+    &__title {
+        text-transform: uppercase;
+        font-size: $size_x1;
+        font-weight: 500;
+        margin-bottom: $spaceV - 5;
+
+        &--unederscore {
+            width: $space;
+            background-color: $color_tertiary;
+            height: 3px;
+        }
+    }
+
+    &__button {
+        margin: $spaceV*4 auto 0;
+        width: 50%;
+    }
+}
