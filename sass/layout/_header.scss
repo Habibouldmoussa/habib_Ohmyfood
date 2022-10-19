@@ -1,10 +1,10 @@
-header {      
+header {
     text-align: center;
 
     .logo {
         img {
             width: 45%;
-            margin: 10px;
+            margin: $spaceV;
         }
     }
 
@@ -37,20 +37,20 @@ header {
             margin: 0px $space;
             font-size: $size_x2 ;
             font-weight: 900;
-            
-         }
+
+        }
 
         &__descreption {
             background-color: lighten($color_gris, 5%);
-            padding: calc($space/2)  ;
+            padding: $space/2;
         }
-        
-        &__text {          
+
+        &__text {
             font-size: medium;
         }
 
         &__button {
-            margin: calc($space/2) 0px;
+            margin: $space/2 0px;
         }
     }
 }
