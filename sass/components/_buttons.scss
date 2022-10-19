@@ -3,8 +3,10 @@
     background: $color_secondery;    
     @include gardient(180deg);
     color: white;
-    padding: 20px calc($space);
-    border-radius:30px ;  
-    @include shadow();
-    font-size: $size_x1 ;       
+    padding: 20px $space;
+    @include radius(30px);
+    @include shadow;
+    font-size: $size_x1;       
 }
+
+ 

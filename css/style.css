@@ -13,6 +13,24 @@ body {
   margin: 0px;
 }
 
+li {
+  list-style-type: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+footer img {
+  max-width: 100%;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
 header {
   text-align: center;
 }
@@ -57,6 +75,146 @@ header .research__button {
   margin: 5% 0px;
 }
 
+footer {
+  background-color: #353535;
+  padding: 12px 5%;
+}
+footer .logo-footer {
+  filter: invert(1);
+  width: 30%;
+  margin: 12px 0;
+}
+footer .menu-footer__elem {
+  line-height: 22px;
+}
+footer .menu-footer a {
+  color: white;
+  font-size: small;
+}
+footer .menu-footer i {
+  margin: 0 4px;
+  font-size: smaller;
+}
+
+.steps {
+  padding: 5%;
+}
+.steps__wrapper {
+  display: flex;
+  justify-content: flex-start;
+  flex-flow: column wrap;
+}
+@media screen and (min-width: 992px) {
+  .steps__wrapper {
+    flex-flow: row wrap;
+  }
+}
+@media screen and (min-width: 800px) {
+  .steps__wrapper {
+    flex-flow: row wrap;
+  }
+}
+.steps__step {
+  box-shadow: 4px 4px 15px -3px #dddddd;
+  border-radius: 15px;
+  padding-top: 20px;
+  margin: 15px auto;
+  background-color: #f7f7f7;
+  font-size: medium;
+  height: 60px;
+  font-weight: 900;
+  width: 100%;
+}
+@media screen and (min-width: 992px) {
+  .steps__step {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 800px) {
+  .steps__step {
+    width: 30%;
+  }
+}
+.steps__step:hover {
+  background-color: #f4eefc;
+}
+.steps__step:hover > i {
+  color: #9356DC;
+}
+.steps span {
+  position: relative;
+  left: -10px;
+  border-radius: 30px;
+  border: 1px #EAEAEA solid;
+  padding: 4px 6px;
+  background-color: #9356DC;
+  color: white;
+  font-size: x-small;
+}
+.steps i {
+  margin: 0 7px;
+}
+
+.restos {
+  padding: 5%;
+  background-color: #f7f7f7;
+}
+.restos__wrapper {
+  display: flex;
+  flex-flow: column;
+}
+@media screen and (min-width: 992px) {
+  .restos__wrapper {
+    flex-flow: row;
+  }
+}
+.restos__post {
+  box-shadow: 4px 4px 15px -3px #dddddd;
+  margin: 12px auto;
+  border-radius: 12px;
+}
+.restos__post-title {
+  margin-top: 5px;
+}
+.restos__fig {
+  position: relative;
+  width: 100%;
+  margin: 0;
+}
+.restos__image {
+  width: 100%;
+  object-fit: cover;
+  height: 173px;
+  border-radius: 12px 12px 0 0;
+}
+.restos--notif {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #278870;
+  background-color: #99E2D0;
+  padding: 12px 5%;
+  font-size: small;
+  font-weight: bolder;
+}
+.restos i {
+  position: absolute;
+  top: 10px;
+  right: 2.5%;
+  font-size: 1.5rem;
+}
+.restos figcaption {
+  position: relative;
+  line-height: 10px;
+  padding: 10px 2.5%;
+}
+@media screen and (min-width: 992px) {
+  .restos a {
+    width: 23%;
+    margin: 0 1%;
+  }
+}
+
 .button_gardient {
   border: none;
   background: #FF79DA;
@@ -64,7 +222,7 @@ header .research__button {
   color: white;
   padding: 20px 10%;
   border-radius: 30px;
-  box-shadow: 4px 4px 15px 0px #aaaaaa;
+  box-shadow: 4px 4px 15px -3px #dddddd;
   font-size: 1rem;
 }
 
