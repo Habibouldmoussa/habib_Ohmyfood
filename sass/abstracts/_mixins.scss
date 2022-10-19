@@ -1,3 +1,4 @@
+//mixin des mediaquery 
 @mixin md($breakpoint) {
 
     @each $breakpoints,
@@ -9,24 +10,24 @@
         }
     }
 }
-
+//mixin des ombres exterieurs  
 @mixin shadow($blur : 10px) {
     box-shadow: 4px 4px $blur -3px darken($color_gris, 25%);
 }
-
+// mixin des degradées  
 @mixin gardient($dgr) {
     background: linear-gradient($dgr, $color_secondery 0%, $color_premary 100%);
 }
-
-@mixin radius($rad, $cot: "all") {
+// Bisautages des bordures 
+@mixin radius($rad, $cot: "all") { //par défaut elle est fixé sur all 
     @if ($cot =="all") {
         border-radius: $rad ;
     }
-
+    // Pour biseauter les bords hauts 
     @if ($cot =="haut") {
         border-radius: $rad $rad 0 0;
     }
-
+    // pour biseauté les bords bas 
     @if ($cot =="bas") {
         border-radius: 0 0 $rad $rad ;
     }

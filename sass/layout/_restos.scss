@@ -5,7 +5,7 @@
     &__wrapper {
         display: flex;
         flex-flow: column;
-
+// Les vignettes sont agencées en ligne seulement en desktop 
         @include md(large) {
             flex-flow: row;
         }
@@ -23,6 +23,7 @@
     }
 
     &__fig {
+        // La balise figure est positionnée en relatif pour que les mentions se positionnent à leurs tours par rapport à cette balises  
         position: relative;
         width: 100%;
         margin: 0;
@@ -33,9 +34,10 @@
         width: 100%;
         object-fit: cover;
         height: 173px;
+        // Les corners sont biseautés seulement en haut pour les images
         @include radius(12px, "haut")
     }
-
+// La mention nouveau est positionnées en absolute pour etre manipuler 
     &--notif {
         position: absolute;
         top: $spaceV;
@@ -48,6 +50,7 @@
     }
 
     i {
+        // Positionnement des coeurs de maniere abolus 
         position: absolute;
         top: $spaceV;
         right: $space/4;
@@ -61,7 +64,7 @@
     }
 
     a {
-
+// Sur la version desktop les vignettes sont fixé à 23% de la largeur global
         @include md(large) {
             width: 23%;
             margin: 0 $space/10;

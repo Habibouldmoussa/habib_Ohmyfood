@@ -1,18 +1,23 @@
 <!doctype html>
-<html lang="en">
+<html lang="Fr">
 
 <head>
   <title>Ohmyfood!</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- integration de la feuille de style  -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+  <!-- Begin header -->
   <header>
+    <!-- begin logo  -->
     <div class="logo">
       <img src="images/logo/ohmyfood.png" alt="logo ohmyfood">
     </div>
+    <!-- End logo -->
+    <!-- Begin search engin -->
     <form method="POST" action="#" class="research">
       <input type="search" name="q" id="site-search" placeholder="Paris, belleville" class="research__input">
       <i class="fa-solid fa-location-dot"></i>
@@ -21,9 +26,12 @@
         <p class="research__text">Découvrez des restaurants d'eception, sélectionnés pas nos soins</p>
         <button class="research__button button_gardient">Explorer nos restaurants</button>
       </section>
+      <!-- END search engin -->
     </form>
   </header>
+  <!-- End header -->
   <main>
+    <!-- Begin steps section  -->
     <section class="steps">
       <h2 class="steps__title">Fonctionnement</h2>
       <ul class="steps__wrapper">
@@ -33,9 +41,12 @@
         <li class="steps__step"><span>3</span><i class="fa-sharp fa-solid fa-store"></i> Dégustez au restaurant</li>
       </ul>
     </section>
+    <!-- End steps section -->
+    <!-- Begin restos section  -->
     <section class="restos">
       <h2 class="restos__title">Restaurants</h2>
       <div class="restos__wrapper">
+        <!-- Resto 1  -->
         <a href="restaurant/La-palette-du-gout.html">
           <article class="restos__post">
             <figure class="restos__fig">
@@ -51,6 +62,8 @@
 
           </article>
         </a>
+        <!-- End Resto 1  -->
+        <!-- Resto 2  -->
         <a href="restaurant/la-note-enchantee.html">
           <article class="restos__post">
             <figure class="restos__fig">
@@ -65,6 +78,8 @@
             </figure>
           </article>
         </a>
+        <!-- End Resto 2 -->
+        <!-- resto 3  -->
         <a href="restaurant/a-la-francaise.html">
           <article class="restos__post">
             <figure class="restos__fig">
@@ -77,6 +92,8 @@
             </figure>
           </article>
         </a>
+        <!-- End Resto 3  -->
+        <!-- Resto 4  -->
         <a href="restaurant/le-delice-des-sens.html">
           <article class="restos__post">
             <figure class="restos__fig">
@@ -90,11 +107,17 @@
             </figure>
           </article>
         </a>
+        <!-- End Resto 4 -->
       </div>
     </section>
+    <!-- End restos section  -->
   </main>
+  <!-- Begin footer -->
   <footer>
+    <!-- logo footer  -->    
     <img src="images/logo/ohmyfood.png" alt="" class="logo-footer">
+    <!-- End logo footer  -->
+    <!-- Begin menu footer  -->
     <nav class="menu-footer">
       <ul class="menu-footer__wrapper">
         <li class="menu-footer__elem"><a href="#"><i class="fa-solid fa-utensils"></i> Proposer un restaurant</a></li>
@@ -103,7 +126,9 @@
         <li class="menu-footer__elem"><a href="mailto:omhabibal@gmail.com"> Contact</a></li>
       </ul>
     </nav>
+   <!-- End menu footer   -->
   </footer>
+<!-- End footer  -->
   <script src="https://kit.fontawesome.com/253bfe4b5c.js" crossorigin="anonymous"></script>
 </body>
 

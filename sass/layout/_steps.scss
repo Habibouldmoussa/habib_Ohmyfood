@@ -7,6 +7,7 @@
         justify-content: flex-start;
         flex-flow: column wrap;
 
+        // les boutons des steps sont agancées en ligne en desktop et en tablette 
         @include md(large) {
             flex-flow: row wrap;
         }
@@ -21,12 +22,14 @@
         @include radius(15px);
         padding-top: $spaceV*2;
         margin: 15px auto;
+        // les steps sont coloriées de la même couleur que le fond du header 
         background-color: lighten($color_gris, 5%);
         font-size: medium;
         height: 60px;
         font-weight: 900;
         width: 100%;
 
+        // les steps sont fixées à 100% en largeur sur le mobile et a 30 sur le reste des supports  
         @include md(large) {
             width: 30%;
         }
@@ -44,7 +47,7 @@
         }
 
     }
-
+// les puces numérotées sont positionnées en relative pour etre décalées 
     span {
         position: relative;
         left: -$spaceV;

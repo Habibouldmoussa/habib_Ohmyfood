@@ -9,10 +9,10 @@ header {
     }
 
     .research {
-        background-color: lighten($color_gris, 5%);
+        background-color: lighten($color_gris, 5%); //#F7F7F7
 
         i {
-            position: relative;
+            position: relative; //  positionnement de l'icone a l'interieur du champ de recherche 
             top: -37px;
             left: -87px;
         }
@@ -22,9 +22,10 @@ header {
             border: 0px;
             background-color: $color_gris;
             height: 50px;
-            box-shadow: 0 4px 4px 0px darken($color_gris, 20%) inset;
+            box-shadow: 0 4px 4px 0px darken($color_gris, 20%) inset; // ombre intérieure du champ  
             text-align: center;
 
+            // style du texte de remplacement     
             &::placeholder {
                 color: black;
                 font-weight: bolder;
@@ -41,7 +42,7 @@ header {
         }
 
         &__descreption {
-            background-color: lighten($color_gris, 5%);
+            background-color: lighten($color_gris, 5%); //#F7F7F7 
             padding: $space/2;
         }
 

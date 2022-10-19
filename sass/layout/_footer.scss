@@ -3,7 +3,7 @@ footer {
     padding: $spaceV+2 $space/2;
 
     .logo-footer {
-        filter: invert(1);
+        filter: invert(1); // inversion de la couleure du logo sur le footer avec son SVG  
         width: 30%;
         margin: $spaceV+2 0
     }

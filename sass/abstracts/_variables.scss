@@ -1,10 +1,13 @@
+//couleures du site
 $color_premary : #9356DC;
 $color_secondery : #FF79DA;
 $color_tertiary : #99E2D0;
 $color_gris : #EAEAEA;
+//Résolutions des differant mediaquery 
 $media :("large": 992px,
     "medium" : 800px,
     "small" : 480px);
+//Espacements et tailles des polices     
 $space : 10%;
 $spaceV : 10px;
 $size_x1: 1rem;
