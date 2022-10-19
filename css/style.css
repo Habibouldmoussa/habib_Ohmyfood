@@ -98,6 +98,7 @@ footer .menu-footer i {
 
 .steps {
   padding: 5%;
+  margin-bottom: 20px;
 }
 .steps__wrapper {
   display: flex;
@@ -115,7 +116,7 @@ footer .menu-footer i {
   }
 }
 .steps__step {
-  box-shadow: 4px 4px 15px -3px #dddddd;
+  box-shadow: 4px 4px 20px -3px #aaaaaa;
   border-radius: 15px;
   padding-top: 20px;
   margin: 15px auto;
@@ -169,7 +170,7 @@ footer .menu-footer i {
   }
 }
 .restos__post {
-  box-shadow: 4px 4px 15px -3px #dddddd;
+  box-shadow: 4px 4px 20px -3px #aaaaaa;
   margin: 12px auto;
   border-radius: 12px;
 }
@@ -205,7 +206,7 @@ footer .menu-footer i {
 }
 .restos figcaption {
   position: relative;
-  line-height: 10px;
+  line-height: 5px;
   padding: 10px 2.5%;
 }
 @media screen and (min-width: 992px) {
@@ -220,10 +221,10 @@ footer .menu-footer i {
   background: #FF79DA;
   background: linear-gradient(180deg, #FF79DA 0%, #9356DC 100%);
   color: white;
-  padding: 20px 10%;
+  padding: 15px 10%;
   border-radius: 30px;
-  box-shadow: 4px 4px 15px -3px #dddddd;
-  font-size: 1rem;
+  box-shadow: 4px 4px 10px -3px #aaaaaa;
+  font-size: small;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,13 +1,12 @@
-$color_premary : #9356DC ;
+$color_premary : #9356DC;
 $color_secondery : #FF79DA;
 $color_tertiary : #99E2D0;
 $color_gris : #EAEAEA;
-$media :(
-    "large": 992px,
+$media :("large": 992px,
     "medium" : 800px,
-    "small" : 480px   
-    );
-$space : 10%;   
+    "small" : 480px);
+$space : 10%;
+$spaceV : 10px;
 $size_x1: 1rem;
 $size_x2: 1.5rem;
 $size_x3: 2rem;

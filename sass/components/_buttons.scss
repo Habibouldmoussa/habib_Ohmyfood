@@ -1,12 +1,10 @@
-.button_gardient {          
-    border: none;  
-    background: $color_secondery;    
+.button_gardient {
+    border: none;
+    background: $color_secondery;
     @include gardient(180deg);
     color: white;
-    padding: 20px $space;
+    padding: $spaceV+5 $space;
     @include radius(30px);
     @include shadow;
-    font-size: $size_x1;       
+    font-size: small;
 }
-
- 
