@@ -1,0 +1,64 @@
+.restos {
+    padding: calc($space/2);
+    background-color: lighten($color_gris, 5%);
+    &__wrapper {
+        display: flex;
+        flex-flow: column;
+        @include md(large){
+            flex-flow: row;            
+        }
+
+    }
+    &__post {
+        @include shadow;
+        margin: 12px auto;
+        @include radius(12px)    
+    }
+
+    &__post-title {
+        margin-top: 5px;  
+    }
+
+    &__fig {
+        position: relative;
+        width: 100%;
+        margin: 0;
+    }
+
+    &__image {
+       
+        width: 100%;
+        object-fit: cover;
+        height: 173px;
+        @include radius(12px, "haut")
+    }
+    &--notif {
+        position: absolute ;
+        top :10px;
+        right: 10px;
+        color: darken($color_tertiary,40%);
+        background-color: $color_tertiary;
+        padding: 12px calc($space/2)  ;
+        font-size: small;
+        font-weight: bolder;
+    }
+    i  {
+        position: absolute;
+        top:10px;
+        right:calc($space/4);
+        font-size: $size_x2;
+        
+    }
+    figcaption {
+        position: relative;
+        line-height: 10px;
+        padding:10px calc($space/4);
+    }
+    a {
+
+        @include md(large){
+            width: 23%;
+            margin: 0 $space/10 ;
+        }
+    }
+}

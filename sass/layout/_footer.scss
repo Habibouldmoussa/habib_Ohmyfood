@@ -1,0 +1,25 @@
+footer {
+    background-color: darken($color_gris, 71%); //#353535
+    padding: 12px $space/2;
+    
+    .logo-footer {        
+         filter: invert(1);   
+        width: 30%;
+        margin: 12px 0        
+    }
+    
+.menu-footer {
+    &__elem {
+        line-height: 22px;        
+    }
+    a{
+        color: white;
+        font-size:small ;
+    } 
+    i {
+        margin: 0 4px;
+        font-size:smaller ;
+    }
+}
+
+}

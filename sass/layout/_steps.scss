@@ -1,0 +1,56 @@
+.steps {
+    padding: calc($space/2);
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: column wrap;
+
+        @include md(large) {
+            flex-flow: row wrap;           
+        }
+        @include md(medium) {
+            flex-flow: row wrap;           
+        }
+    }
+
+    &__step {
+        @include shadow;
+        @include radius(15px);
+        padding-top: 20px;
+        margin: 15px auto;
+        background-color: lighten($color_gris, 5%);
+        font-size: medium;
+        height: 60px;
+        font-weight: 900;
+        width: 100%;
+        @include md(large) {
+            width: 30%;           
+        }
+        @include md(medium) {
+            width: 30%;           
+        }
+        &:hover {
+            background-color: lighten($color_premary, 36%);  
+            &> i {
+                color : $color_premary; 
+             }           
+        }
+      
+    }
+
+    span {
+        position: relative;
+        left: -10px;
+        @include radius(30px);
+        border: 1px $color_gris solid;
+        padding: 4px 6px;
+        background-color: $color_premary;
+        color: white;
+        font-size: x-small;
+    }
+
+    i {
+        margin: 0 7px;
+    }
+}
