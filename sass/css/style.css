@@ -362,21 +362,26 @@ footer .menu-footer i {
 .loadscreen__wrapper-logo {
   position: absolute;
   transform: scale(5, 0.001);
-  filter: blur(1rem);
-  top: 45%;
+  filter: blur(0.5rem);
+  top: 50%;
   z-index: 998;
 }
 .loadscreen__logo-blur {
   width: 100%;
-  opacity: 0.2;
+  opacity: 0.1;
   animation: 2s blur_scale linear infinite;
 }
 .loadscreen__logo {
-  position: absolute;
-  top: 48%;
+  position: relative;
+  top: 140px;
   left: 20%;
   width: 60%;
   z-index: 999;
+}
+@media screen and (min-width: 992px) {
+  .loadscreen__logo {
+    top: 140px;
+  }
 }
 @keyframes rotate {
   100% {
