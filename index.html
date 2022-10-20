@@ -48,66 +48,79 @@
       <h2 class="restos__title">Restaurants</h2>
       <div class="restos__wrapper">
         <!-- Resto 1  -->
-        <a href="restaurant/La-palette-du-gout.html">
-          <article class="restos__post">
+        <article class="restos__post">
+          <a href="restaurant/La-palette-du-gout.html">
             <figure class="restos__fig">
               <img src="images/restaurants/vignette_la-palette-du-gout.jpg" alt="la-palette-du-gout"
                 class="restos__image">
               <figcaption>
                 <h3 class="restos__post-title">La palette du goût</h3>
                 <p class="restos__post-text">Ménilmontant</p>
-                <i class="fa-regular fa-heart"></i>
+
               </figcaption>
               <span class="restos--notif">Nouveau</span>
             </figure>
-
-          </article>
-        </a>
+          </a>
+          <input type="checkbox" name="heart-1" id="heart-1">
+          <label for="heart-1">
+            <i class="fa-solid fa-heart"></i>
+          </label>
+        </article>
         <!-- End Resto 1  -->
         <!-- Resto 2  -->
-        <a href="restaurant/la-note-enchantee.html">
-          <article class="restos__post">
+        <article class="restos__post">
+          <a href="restaurant/la-note-enchantee.html">
+
             <figure class="restos__fig">
               <img src="images/restaurants/vignette_la-note-enchantee.jpg" alt="la-note-enchantee"
                 class="restos__image">
               <figcaption>
                 <h3 class="restos__post-title">La note enchantée</h3>
                 <p class="restos__post-text">Charonne</p>
-                <i class="fa-regular fa-heart"></i>
               </figcaption>
               <span class="restos--notif">Nouveau</span>
             </figure>
-          </article>
-        </a>
+          </a>
+          <input type="checkbox" name="heart-2" id="heart-2">
+          <label for="heart-2">
+            <i class="fa-regular fa-heart"></i>
+          </label>
+        </article>
         <!-- End Resto 2 -->
         <!-- resto 3  -->
-        <a href="restaurant/a-la-francaise.html">
-          <article class="restos__post">
+        <article class="restos__post">
+          <a href="restaurant/a-la-francaise.html">
             <figure class="restos__fig">
               <img src="images/restaurants/vignette_a_la_francaise.jpg" alt="a_la_francaise" class="restos__image">
               <figcaption>
                 <h3 class="restos__post-title">À la française</h3>
                 <p class="restos__post-text">Cité rouge</p>
-                <i class="fa-regular fa-heart"></i>
               </figcaption>
             </figure>
-          </article>
-        </a>
+          </a>
+          <input type="checkbox" name="heart-3" id="heart-3">
+          <label for="heart-3">
+            <i class="fa-regular fa-heart"></i>
+          </label>
+        </article>
         <!-- End Resto 3  -->
         <!-- Resto 4  -->
-        <a href="restaurant/le-delice-des-sens.html">
-          <article class="restos__post">
+        <article class="restos__post">
+          <a href="restaurant/le-delice-des-sens.html">
             <figure class="restos__fig">
               <img src="images/restaurants/vignette_les-delice-des-sens.jpg" alt="le-delice-des-sens"
                 class="restos__image">
               <figcaption>
                 <h3 class="restos__post-title">Le délice des sens</h3>
                 <p class="restos__post-text">Folie-Méricourt</p>
-                <i class="fa-regular fa-heart"></i>
               </figcaption>
             </figure>
-          </article>
-        </a>
+          </a>
+          <input type="checkbox" name="heart-4" id="heart-4">
+          <label for="heart-4">
+            <i class="fa-regular fa-heart"></i>
+          </label>
+        </article>
         <!-- End Resto 4 -->
       </div>
     </section>
@@ -115,8 +128,8 @@
   </main>
   <!-- Begin footer -->
   <footer>
-    <!-- logo footer  -->    
-    <img src="images/logo/ohmyfood.png" alt="" class="logo-footer">
+    <!-- logo footer  -->
+    <img src="images/logo/ohmyfood.png" alt="logo footer" class="logo-footer">
     <!-- End logo footer  -->
     <!-- Begin menu footer  -->
     <nav class="menu-footer">
@@ -127,9 +140,24 @@
         <li class="menu-footer__elem"><a href="mailto:omhabibal@gmail.com"> Contact</a></li>
       </ul>
     </nav>
-   <!-- End menu footer   -->
+    <!-- End menu footer   -->
   </footer>
-<!-- End footer  -->
+  <!-- End footer  -->
+  <!-- begin transition  -->
+  
+  <div class="loadscreen" >
+    
+   
+    <img src="images/logo/ohmyfood.png" alt="logo loader" class="loadscreen__logo">
+    <i class="fa-solid fa-bowl-food"></i>
+    <div class="container">   
+     
+      <div class="loadscreen__loader">
+       
+      </div>
+    </div>
+  </div>
+  <!-- End transition -->
   <script src="https://kit.fontawesome.com/253bfe4b5c.js" crossorigin="anonymous"></script>
 </body>
 

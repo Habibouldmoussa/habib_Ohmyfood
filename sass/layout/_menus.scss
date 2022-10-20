@@ -3,53 +3,65 @@
     @include radius(15px);
     margin: $spaceV 0;
     line-height: $spaceV*2.0;
-    padding: $spaceV calc($space/2);
+    //padding: $spaceV calc($space/2);
     font-size: calc($size_x1/1.2);
-    position: relative;
+    //position: relative;
     @include md(large) {
-        padding: $spaceV calc($space/4);
+        //padding: $spaceV calc($space/4);
     }
 
     label {
         display: flex;
-        flex-flow: row wrap
+        flex-flow: column wrap;
+        justify-content: center;        
+        height: 59px ;
+        align-items: stretch;
+        align-content: space-between;
+        text-indent: $space; //10px     
     }
 
     &__title {
         margin: 0;
-        width: 80%;
+        width: 45%;
         font-weight: 900;
+        @include cut_text 
     }
 
     &__text {
         margin: 0;
-        width: 80%;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
+        width: 50%;
+        @include cut_text        
     }
 
     &__prix {
         font-weight: 900;
+        text-align: right;                
+        margin-right: -15%;
     }
 
-    &--select {
-        position: absolute;        
+    &--select {  
+        width: 0%;
+        min-width: 0;        
+        height: 59px;    
+        position: relative;
         background-color: $color_tertiary;        
         color:white;
-        padding: $spaceV*2;
+        //padding: $spaceV*2;        
         top:0;
         right:0;
-        @include radius(15px, right)
+        @include radius(15px, right);
+        text-align: center;
+        i {                    
+                margin-top: $spaceV*2.5;
+        }
     }
 
     &--select:not(:checked) {
         opacity: 0;
     }
-
+    
     &__check {        
         display: none;
-
         &:checked+label .menu-post--select {
             opacity: 1;
         }

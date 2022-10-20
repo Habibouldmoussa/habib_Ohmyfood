@@ -35,3 +35,8 @@
         border-radius: 0 $rad $rad 0 ;
     }
 }
+@mixin cut_text() {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}

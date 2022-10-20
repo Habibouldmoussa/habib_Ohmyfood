@@ -17,25 +17,37 @@
         margin: $spaceV 0;
     }
 
-    &>i {
+    input {
+        display: none;
+
+        &:checked+label>i {
+            background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
+            color: transparent;
+            background-clip: text;
+
+        }
+    }
+
+    & i {
         font-size: $size_x2;
     }
 
     &__wrapper {
         display: flex;
         flex-flow: column;
-        
-        @include md(large){
+
+        @include md(large) {
             flex-flow: row wrap;
         }
     }
 
     section {
         display: flex;
-        flex-flow: column;        
-        @include md(large){
+        flex-flow: column;
+
+        @include md(large) {
             width: 30%;
-            margin-left : calc($space/4); 
+            margin-left: calc($space/4);
         }
     }
 
