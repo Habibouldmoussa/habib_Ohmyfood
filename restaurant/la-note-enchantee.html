@@ -30,12 +30,13 @@
   <!-- Begin main -->
   <main class="menu-main">
     <section class="menu">
-      <h1 class="menu__resto">La note enchantée</h1> 
+      <h1 class="menu__resto">La note enchantée</h1>
       <input type="checkbox" name="like" id="like">
-      <label for="like">
+      <label for="like" class="menu__heart">
         <i class="fa-solid fa-heart"></i>
+        <i class="fa-regular fa-heart"></i>
       </label>
-      <form action="#" method="get" class="menu__wrapper">
+      <form class="menu__wrapper">
         <section>
           <h2 class="menu__title">ENTRéES</h2>
           <span class="menu__title--unederscore"></span>
@@ -138,7 +139,7 @@
             </label>
           </article>
         </section>
-        <button type="submit" class="menu__button button_gardient">Commander</button>
+        <button class="menu__button button_gardient" deasibled>Commander</button>
       </form>
     </section>
   </main>

@@ -62,19 +62,40 @@
         bottom: $spaceV*4;
         right: calc($space/4);
     }
+
     input {
         display: none;
-    }
-    input:checked + label > i{
-        background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
-        color: transparent;
-        -webkit-background-clip: text;
 
+        &:checked+label>.fa-solid {
+            background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
+            color: transparent;
+            -webkit-background-clip: text;
+            animation: like_bounce 300ms ease 0s 1 normal forwards;
+        }
+
+        &:checked+label>.fa-regular {
+            opacity: 0;
+        }
+    }
+
+    input:not(:checked)+label>.fa-solid {
+        opacity: 0;
+    }
+
+    .fa-solid {
+        position: relative;
+        left: $space*5;
+        z-index: 1;
+    }
+
+    .fa-regular {
+        position: relative;
+        z-index: 9;
     }
 
     i {
         // Positionnement des coeurs de maniere abolus    
-        font-size: $size_x2;        
+        font-size: $size_x2;
 
     }
 

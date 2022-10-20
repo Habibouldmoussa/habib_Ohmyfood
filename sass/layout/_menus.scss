@@ -3,67 +3,75 @@
     @include radius(15px);
     margin: $spaceV 0;
     line-height: $spaceV*2.0;
-    //padding: $spaceV calc($space/2);
     font-size: calc($size_x1/1.2);
-    //position: relative;
-    @include md(large) {
-        //padding: $spaceV calc($space/4);
-    }
 
     label {
         display: flex;
         flex-flow: column wrap;
-        justify-content: center;        
-        height: 59px ;
+        justify-content: center;
+        height: 59px;
         align-items: stretch;
         align-content: space-between;
         text-indent: $space; //10px     
     }
 
+
     &__title {
         margin: 0;
-        width: 45%;
+        width: 60%;
         font-weight: 900;
-        @include cut_text 
+        @include cut_text
     }
 
     &__text {
         margin: 0;
-        width: 50%;
-        @include cut_text        
+        width: 60%;
+        @include cut_text
     }
 
     &__prix {
         font-weight: 900;
-        text-align: right;                
-        margin-right: -15%;
+        text-align: right;
+        width: 20%;
     }
 
-    &--select {  
-        width: 0%;
-        min-width: 0;        
-        height: 59px;    
+    &--select {
+        min-width: 0;
+        height: 59px;
         position: relative;
-        background-color: $color_tertiary;        
-        color:white;
-        //padding: $spaceV*2;        
-        top:0;
-        right:0;
+        background-color: $color_tertiary;
+        color: white;
+        top: 0;
+        right: 0;
         @include radius(15px, right);
         text-align: center;
-        i {                    
-                margin-top: $spaceV*2.5;
+
+        i {
+            margin-top: $spaceV*2;
         }
     }
 
     &--select:not(:checked) {
         opacity: 0;
     }
-    
-    &__check {        
+
+    &__check {
         display: none;
+
+        &:hover+label .menu-post--select {
+            opacity: 1;
+            animation: slide_select 1s ease 0s 1 normal forwards;
+        }
+
+        &:not(:hover)+label .menu-post--select {            
+            animation: slide_select 1s ease 0s 1 normal reverse;
+        }
+
         &:checked+label .menu-post--select {
             opacity: 1;
+            transform-origin: 100% 50%;
+            animation: slide_select 1s ease 0s 1 normal forwards;
+
         }
     }
 }

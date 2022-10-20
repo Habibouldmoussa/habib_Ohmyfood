@@ -20,16 +20,25 @@
     input {
         display: none;
 
-        &:checked+label>i {
+        &:checked+label>.fa-solid {
             background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
             color: transparent;
-            background-clip: text;
-
+            -webkit-background-clip: text;
+            animation: like_bounce 300ms ease 0s 1 normal forwards;
         }
+
+        &:checked+label>.fa-regular {
+            opacity: 0;
+        }
+
+    }
+
+    input:not(:checked)+label>.fa-solid {
+        opacity: 0;
     }
 
     & i {
-        font-size: $size_x2;
+        font-size: $size_x1;
     }
 
     &__wrapper {
@@ -38,6 +47,25 @@
 
         @include md(large) {
             flex-flow: row wrap;
+        }
+    }
+
+    &__heart {
+        & i {
+            font-size: $size_x2;
+        }
+        .fa-solid {
+            position: absolute;
+            right: 7%;
+            top: $spaceV*2;
+            z-index: 1;
+        }
+
+        .fa-regular {
+            position: absolute;
+            right: 7%;
+            top: $spaceV*2;
+            z-index: 9;
         }
     }
 
@@ -62,6 +90,7 @@
             background-color: $color_tertiary;
             height: 3px;
         }
+
     }
 
     &__button {

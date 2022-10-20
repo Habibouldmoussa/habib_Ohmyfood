@@ -109,7 +109,7 @@ a {
 }
 .menu-post__title {
   margin: 0;
-  width: 45%;
+  width: 60%;
   font-weight: 900;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -117,7 +117,7 @@ a {
 }
 .menu-post__text {
   margin: 0;
-  width: 50%;
+  width: 60%;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -125,10 +125,9 @@ a {
 .menu-post__prix {
   font-weight: 900;
   text-align: right;
-  margin-right: -15%;
+  width: 20%;
 }
 .menu-post--select {
-  width: 0%;
   min-width: 0;
   height: 59px;
   position: relative;
@@ -140,7 +139,7 @@ a {
   text-align: center;
 }
 .menu-post--select i {
-  margin-top: 25px;
+  margin-top: 20px;
 }
 .menu-post--select:not(:checked) {
   opacity: 0;
@@ -148,8 +147,17 @@ a {
 .menu-post__check {
   display: none;
 }
+.menu-post__check:hover + label .menu-post--select {
+  opacity: 1;
+  animation: slide_select 1s ease 0s 1 normal forwards;
+}
+.menu-post__check:not(:hover) + label .menu-post--select {
+  animation: slide_select 1s ease 0s 1 normal reverse;
+}
 .menu-post__check:checked + label .menu-post--select {
   opacity: 1;
+  transform-origin: 100% 50%;
+  animation: slide_select 1s ease 0s 1 normal forwards;
 }
 
 footer {
@@ -290,10 +298,26 @@ footer .menu-footer i {
 .restos input {
   display: none;
 }
-.restos input:checked + label > i {
+.restos input:checked + label > .fa-solid {
   background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
   color: transparent;
   -webkit-background-clip: text;
+  animation: like_bounce 300ms ease 0s 1 normal forwards;
+}
+.restos input:checked + label > .fa-regular {
+  opacity: 0;
+}
+.restos input:not(:checked) + label > .fa-solid {
+  opacity: 0;
+}
+.restos .fa-solid {
+  position: relative;
+  left: 50%;
+  z-index: 1;
+}
+.restos .fa-regular {
+  position: relative;
+  z-index: 9;
 }
 .restos i {
   font-size: 1.5rem;
@@ -426,6 +450,121 @@ footer .menu-footer i {
   }
 }
 
+.steps__step:hover {
+  animation: botton_heart 2s ease 0s 1 normal forwards;
+}
+.steps__step:hover > i {
+  animation: rotate 2s ease 0s 1 normal forwards;
+}
+
+.restos__post:hover {
+  animation: botton_heart 2s ease 0s 1 normal forwards;
+}
+.restos__post:hover .restos--notif {
+  animation: nouveau_bounce 2s ease 0s 1 alternate none;
+}
+
+@keyframes botton_heart {
+  0% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    transform-origin: center center;
+  }
+  10% {
+    animation-timing-function: ease-in;
+    transform: scale(0.91);
+  }
+  17% {
+    animation-timing-function: ease-out;
+    transform: scale(0.98);
+  }
+  33% {
+    animation-timing-function: ease-in;
+    transform: scale(0.87);
+  }
+  45% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+}
+@keyframes nouveau_bounce {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  10%, 30%, 50%, 70% {
+    transform: translateX(-10px);
+  }
+  20%, 40%, 60% {
+    transform: translateX(10px);
+  }
+  80% {
+    transform: translateX(8px);
+  }
+  90% {
+    transform: translateX(-8px);
+  }
+}
+.button_gardient:hover {
+  animation: button_shadow 1s ease 0s 1 normal forwards;
+}
+
+@keyframes button_shadow {
+  0% {
+    box-shadow: 0 0 20px 0px #b7b7b7;
+    filter: brightness(100%);
+  }
+  100% {
+    box-shadow: 0 0 20px 0 #6b6b6b;
+    filter: brightness(110%);
+  }
+}
+@keyframes like_bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: scale(0);
+  }
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: scale(1);
+  }
+  55% {
+    animation-timing-function: ease-in;
+    transform: scale(0.7);
+  }
+  72% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+  81% {
+    animation-timing-function: ease-in;
+    transform: scale(0.84);
+  }
+  89% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+  }
+  95% {
+    animation-timing-function: ease-in;
+    transform: scale(0.95);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    transform: scale(1);
+    z-index: auto;
+  }
+}
+@keyframes slide_select {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 16%;
+  }
+}
 .menu-main {
   background-color: #f7f7f7;
 }
@@ -446,13 +585,20 @@ footer .menu-footer i {
 .menu input {
   display: none;
 }
-.menu input:checked + label > i {
+.menu input:checked + label > .fa-solid {
   background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
   color: transparent;
-  background-clip: text;
+  -webkit-background-clip: text;
+  animation: like_bounce 300ms ease 0s 1 normal forwards;
+}
+.menu input:checked + label > .fa-regular {
+  opacity: 0;
+}
+.menu input:not(:checked) + label > .fa-solid {
+  opacity: 0;
 }
 .menu i {
-  font-size: 1.5rem;
+  font-size: 1rem;
 }
 .menu__wrapper {
   display: flex;
@@ -462,6 +608,21 @@ footer .menu-footer i {
   .menu__wrapper {
     flex-flow: row wrap;
   }
+}
+.menu__heart i {
+  font-size: 1.5rem;
+}
+.menu__heart .fa-solid {
+  position: absolute;
+  right: 7%;
+  top: 20px;
+  z-index: 1;
+}
+.menu__heart .fa-regular {
+  position: absolute;
+  right: 7%;
+  top: 20px;
+  z-index: 9;
 }
 .menu section {
   display: flex;
