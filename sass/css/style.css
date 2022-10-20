@@ -333,11 +333,13 @@ footer .menu-footer i {
   animation-fill-mode: forwards;
 }
 .loadscreen i {
-  position: relative;
-  color: #9356DC;
-  top: 30%;
+  position: absolute;
+  color: black;
+  bottom: 10%;
   z-index: 999;
-  font-size: 6rem;
+  font-size: 2rem;
+  animation: 150ms 2s bowl ease-in forwards;
+  animation-iteration-count: 3;
 }
 .loadscreen .container {
   width: 200px;
@@ -357,8 +359,24 @@ footer .menu-footer i {
   filter: blur(3px);
   animation: 2s rotate linear infinite;
 }
-.loadscreen__logo {
+.loadscreen__wrapper-logo {
+  position: absolute;
+  transform: scale(5, 0.001);
+  filter: blur(1rem);
+  top: 45%;
+  z-index: 998;
+}
+.loadscreen__logo-blur {
   width: 100%;
+  opacity: 0.2;
+  animation: 2s blur_scale linear infinite;
+}
+.loadscreen__logo {
+  position: absolute;
+  top: 48%;
+  left: 20%;
+  width: 60%;
+  z-index: 999;
 }
 @keyframes rotate {
   100% {
@@ -371,10 +389,35 @@ footer .menu-footer i {
   }
   80% {
     opacity: 1;
-    display: none;
+  }
+  99% {
+    transform: scale(1);
   }
   100% {
     opacity: 0;
+    transform: scale(0);
+  }
+}
+@keyframes bowl {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes blur_scale {
+  0% {
+    transform: scale(0, 1000);
+  }
+  50% {
+    transform: scale(0.2, 1000);
+  }
+  100% {
+    transform: scale(0, 1000);
   }
 }
 
