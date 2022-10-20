@@ -20,7 +20,7 @@
         position: absolute;
         color: black;
         bottom: 10%;
-        z-index: 999;
+        z-index: 9999;
         font-size: $size_x3;
         animation: 150ms 2s bowl ease-in forwards;
         animation-iteration-count: 3;
@@ -271,7 +271,7 @@
 }
 // annimation pages menu 
 
-@keyframes slide_select {
+@keyframes slide_hover {
 	0% {
         opacity: 0;		
         width: 0;
@@ -280,5 +280,30 @@
 	100% {
         opacity: 1;     
         width: 16%;
+	}
+}
+@keyframes slide_select {
+	0% {
+        opacity: 0;		
+        width: 0;
+     background-color: $color_tertiary
+	}
+
+	100% {
+        opacity: 1;     
+        width: 16%;
+        background-color: darken($color_tertiary, 30%)    
+	}
+}
+
+@keyframes fade_in {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateY(0);
 	}
 }

@@ -40,3 +40,11 @@
     text-overflow: ellipsis;
     overflow: hidden;
 }
+@mixin annimation_card {
+    @for $i from 1 through 3{
+      &:nth-child(#{$i}) {
+        
+        animation: fade_in 1s ease #{calc($i/2)}s 1 normal forwards;
+      }
+    }
+}

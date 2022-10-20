@@ -34,10 +34,6 @@
             width: 30%;
         }
 
-        @include md(medium) {
-            width: 30%;
-        }
-
         &:hover {
             background-color: lighten($color_premary, 36%);
 

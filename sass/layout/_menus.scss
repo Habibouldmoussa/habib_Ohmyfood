@@ -3,8 +3,8 @@
     @include radius(15px);
     margin: $spaceV 0;
     line-height: $spaceV*2.0;
-    font-size: calc($size_x1/1.2);
-
+    font-size: calc($size_x1/1.2);   
+    
     label {
         display: flex;
         flex-flow: column wrap;
@@ -14,7 +14,6 @@
         align-content: space-between;
         text-indent: $space; //10px     
     }
-
 
     &__title {
         margin: 0;
@@ -60,17 +59,23 @@
 
         &:hover+label .menu-post--select {
             opacity: 1;
-            animation: slide_select 1s ease 0s 1 normal forwards;
+            animation: slide_hover 1s ease 0s 1 normal forwards;
         }
 
         &:not(:hover)+label .menu-post--select {            
-            animation: slide_select 1s ease 0s 1 normal reverse;
+            animation: slide_hover 1s ease 0s 1 normal reverse;
         }
 
         &:checked+label .menu-post--select {
             opacity: 1;
-            transform-origin: 100% 50%;
+            //transform-origin: 100% 50%;
             animation: slide_select 1s ease 0s 1 normal forwards;
+
+        }
+        &:not(:checked)+label .menu-post--select {
+            opacity: 0;
+            //transform-origin: 100% 50%;
+            animation: slide_select 1s ease 0s 1 normal reverse;
 
         }
     }

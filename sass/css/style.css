@@ -149,15 +149,18 @@ a {
 }
 .menu-post__check:hover + label .menu-post--select {
   opacity: 1;
-  animation: slide_select 1s ease 0s 1 normal forwards;
+  animation: slide_hover 1s ease 0s 1 normal forwards;
 }
 .menu-post__check:not(:hover) + label .menu-post--select {
-  animation: slide_select 1s ease 0s 1 normal reverse;
+  animation: slide_hover 1s ease 0s 1 normal reverse;
 }
 .menu-post__check:checked + label .menu-post--select {
   opacity: 1;
-  transform-origin: 100% 50%;
   animation: slide_select 1s ease 0s 1 normal forwards;
+}
+.menu-post__check:not(:checked) + label .menu-post--select {
+  opacity: 0;
+  animation: slide_select 1s ease 0s 1 normal reverse;
 }
 
 footer {
@@ -212,11 +215,6 @@ footer .menu-footer i {
   width: 100%;
 }
 @media screen and (min-width: 992px) {
-  .steps__step {
-    width: 30%;
-  }
-}
-@media screen and (min-width: 800px) {
   .steps__step {
     width: 30%;
   }
@@ -313,11 +311,11 @@ footer .menu-footer i {
 .restos .fa-solid {
   position: relative;
   left: 50%;
-  z-index: 1;
+  z-index: 0;
 }
 .restos .fa-regular {
   position: relative;
-  z-index: 9;
+  z-index: 0;
 }
 .restos i {
   font-size: 1.5rem;
@@ -360,7 +358,7 @@ footer .menu-footer i {
   position: absolute;
   color: black;
   bottom: 10%;
-  z-index: 999;
+  z-index: 9999;
   font-size: 2rem;
   animation: 150ms 2s bowl ease-in forwards;
   animation-iteration-count: 3;
@@ -555,7 +553,7 @@ footer .menu-footer i {
     z-index: auto;
   }
 }
-@keyframes slide_select {
+@keyframes slide_hover {
   0% {
     opacity: 0;
     width: 0;
@@ -563,6 +561,28 @@ footer .menu-footer i {
   100% {
     opacity: 1;
     width: 16%;
+  }
+}
+@keyframes slide_select {
+  0% {
+    opacity: 0;
+    width: 0;
+    background-color: #99E2D0;
+  }
+  100% {
+    opacity: 1;
+    width: 16%;
+    background-color: #32b091;
+  }
+}
+@keyframes fade_in {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 .menu-main {
@@ -609,6 +629,18 @@ footer .menu-footer i {
     flex-flow: row wrap;
   }
 }
+.menu__wrapper section {
+  opacity: 0;
+}
+.menu__wrapper section:nth-child(1) {
+  animation: fade_in 1s ease 0.5s 1 normal forwards;
+}
+.menu__wrapper section:nth-child(2) {
+  animation: fade_in 1s ease 1s 1 normal forwards;
+}
+.menu__wrapper section:nth-child(3) {
+  animation: fade_in 1s ease 1.5s 1 normal forwards;
+}
 .menu__heart i {
   font-size: 1.5rem;
 }
@@ -616,13 +648,13 @@ footer .menu-footer i {
   position: absolute;
   right: 7%;
   top: 20px;
-  z-index: 1;
+  z-index: 0;
 }
 .menu__heart .fa-regular {
   position: absolute;
   right: 7%;
   top: 20px;
-  z-index: 9;
+  z-index: 1;
 }
 .menu section {
   display: flex;

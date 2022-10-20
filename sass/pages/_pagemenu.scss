@@ -16,7 +16,7 @@
         width: 85%;
         margin: $spaceV 0;
     }
-
+    
     input {
         display: none;
 
@@ -48,6 +48,10 @@
         @include md(large) {
             flex-flow: row wrap;
         }
+        section {
+            opacity: 0;
+            @include annimation_card;        
+        }
     }
 
     &__heart {
@@ -58,14 +62,14 @@
             position: absolute;
             right: 7%;
             top: $spaceV*2;
-            z-index: 1;
+            z-index: 0;
         }
 
         .fa-regular {
             position: absolute;
             right: 7%;
             top: $spaceV*2;
-            z-index: 9;
+            z-index: 1;
         }
     }
 
