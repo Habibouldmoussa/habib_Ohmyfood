@@ -10,41 +10,51 @@
         }
     }
 }
+
 //mixin des ombres exterieurs  
 @mixin shadow($blur : 10px) {
     box-shadow: 4px 4px $blur -3px darken($color_gris, 25%);
 }
+
 // mixin des degradées  
 @mixin gardient($dgr) {
     background: linear-gradient($dgr, $color_secondery 0%, $color_premary 100%);
 }
+
 // Bisautages des bordures 
-@mixin radius($rad, $cot: "all") { //par défaut elle est fixé sur all 
+@mixin radius($rad, $cot: "all") {
+
+    //par défaut elle est fixé sur all 
     @if ($cot =="all") {
         border-radius: $rad ;
     }
+
     // Pour biseauter les bords hauts 
     @if ($cot =="haut") {
         border-radius: $rad $rad 0 0;
     }
+
     // pour biseauté les bords bas 
     @if ($cot =="bas") {
         border-radius: 0 0 $rad $rad ;
     }
+
     @if ($cot =="right") {
-        border-radius: 0 $rad $rad 0 ;
+        border-radius: 0 $rad $rad 0;
     }
 }
+
 @mixin cut_text() {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
+
 @mixin annimation_card {
-    @for $i from 1 through 3{
-      &:nth-child(#{$i}) {
-        
-        animation: fade_in 1s ease #{calc($i/2)}s 1 normal forwards;
-      }
+    @for $i from 1 through 3 {
+        &:nth-child(#{$i}) {
+
+            animation: fade_in 1s ease #{calc($i/2)}s 1 normal forwards;
+        }
     }
 }

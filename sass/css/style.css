@@ -153,7 +153,7 @@ a {
   animation: slide_hover 1s ease 0s 1 normal forwards;
 }
 .menu-post__check:not(:hover) + label .menu-post--select {
-  animation: slide_hover 1s ease 0s 1 normal reverse;
+  opacity: 0;
 }
 .menu-post__check:checked + label .menu-post--select {
   opacity: 1;
@@ -161,7 +161,6 @@ a {
 }
 .menu-post__check:not(:checked) + label .menu-post--select {
   opacity: 0;
-  animation: slide_select 1s ease 0s 1 normal reverse;
 }
 
 footer {
@@ -288,6 +287,7 @@ footer .menu-footer i {
   padding: 7px 5%;
   font-size: small;
   font-weight: bolder;
+  margin: 0;
 }
 .restos label {
   position: absolute;
