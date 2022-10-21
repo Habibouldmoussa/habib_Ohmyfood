@@ -1,3 +1,4 @@
+// Section restaurant sur la page d'accueil
 .restos {
     padding: calc($space/2);
     background-color: lighten($color_gris, 5%);
@@ -73,10 +74,9 @@
 
     &__post:hover {
 
-        animation: botton_heart 2s ease 0s 1 normal forwards;
-
+        
         & .restos--notif {
-            animation: nouveau_bounce 2s ease 0s 1 alternate none;
+            animation: nouveau_bounce 1s ease 0s 1 alternate none;
         }
 
     }

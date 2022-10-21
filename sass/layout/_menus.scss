@@ -1,3 +1,4 @@
+// Les plats des restaurant 
 .menu-post {
     @include shadow(20px);
     @include radius(15px);
@@ -34,9 +35,13 @@
         font-weight: 900;
         text-align: right;
         width: 20%;
+        //l'annimation du prix viens succesesivement a celui de la selection du plats  
+        transform: translatex(40px);
+        transition: transform 250ms;
     }
 
     &--select {
+        width: 20%;
         min-width: 0;
         height: 59px;
         position: relative;
@@ -46,6 +51,10 @@
         right: 0;
         @include radius(15px, right);
         text-align: center;
+        transform: scalex(0);
+        //annimation du bouton selecion 
+        transform-origin: center right;
+        transition: transform 250ms;
 
         i {
             margin-top: $spaceV*2;
@@ -53,32 +62,23 @@
         }
     }
 
-    &--select:not(:checked) {
-        opacity: 0;
-    }
-
     &__check {
         display: none;
 
+        //tout les cas de figure du declanchement de l'annimation passage de la souris et check du plat 
         &:hover+label .menu-post--select {
             opacity: 1;
-            animation: slide_hover 1s ease 0s 1 normal forwards;
+            transform: scalex(1);
         }
 
-        &:not(:hover)+label .menu-post--select {
-            opacity: 0;
+        &:hover+label .menu-post__prix {
+            opacity: 1;
+            transform: translatex(-20px);
         }
 
         &:checked+label .menu-post--select {
-            opacity: 1;
-
-            animation: slide_select 1s ease 0s 1 normal forwards;
-
-        }
-
-        &:not(:checked)+label .menu-post--select {
-            opacity: 0;
-
+            transform: scalex(1);
+            background-color: darken($color_tertiary, 20%);
         }
     }
 }

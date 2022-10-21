@@ -244,28 +244,6 @@ a {
     z-index: auto;
   }
 }
-@keyframes slide_hover {
-  0% {
-    opacity: 0;
-    width: 0;
-  }
-  100% {
-    opacity: 1;
-    width: 16%;
-  }
-}
-@keyframes slide_select {
-  0% {
-    opacity: 0;
-    width: 0;
-    background-color: #99E2D0;
-  }
-  100% {
-    opacity: 1;
-    width: 16%;
-    background-color: #32b091;
-  }
-}
 @keyframes fade_in {
   0% {
     opacity: 0;
@@ -471,8 +449,11 @@ a {
   font-weight: 900;
   text-align: right;
   width: 20%;
+  transform: translatex(40px);
+  transition: transform 250ms;
 }
 .menu-post--select {
+  width: 20%;
   min-width: 0;
   height: 59px;
   position: relative;
@@ -482,29 +463,27 @@ a {
   right: 0;
   border-radius: 0 15px 15px 0;
   text-align: center;
+  transform: scalex(0);
+  transform-origin: center right;
+  transition: transform 250ms;
 }
 .menu-post--select i {
   margin-top: 20px;
-}
-.menu-post--select:not(:checked) {
-  opacity: 0;
 }
 .menu-post__check {
   display: none;
 }
 .menu-post__check:hover + label .menu-post--select {
   opacity: 1;
-  animation: slide_hover 1s ease 0s 1 normal forwards;
+  transform: scalex(1);
 }
-.menu-post__check:not(:hover) + label .menu-post--select {
-  opacity: 0;
+.menu-post__check:hover + label .menu-post__prix {
+  opacity: 1;
+  transform: translatex(-20px);
 }
 .menu-post__check:checked + label .menu-post--select {
-  opacity: 1;
-  animation: slide_select 1s ease 0s 1 normal forwards;
-}
-.menu-post__check:not(:checked) + label .menu-post--select {
-  opacity: 0;
+  transform: scalex(1);
+  background-color: #4acbab;
 }
 
 .steps {
@@ -629,11 +608,8 @@ a {
   font-size: 1.5rem;
   cursor: pointer;
 }
-.restos__post:hover {
-  animation: botton_heart 2s ease 0s 1 normal forwards;
-}
 .restos__post:hover .restos--notif {
-  animation: nouveau_bounce 2s ease 0s 1 alternate none;
+  animation: nouveau_bounce 1s ease 0s 1 alternate none;
 }
 .restos__post-title {
   margin-top: 5px;

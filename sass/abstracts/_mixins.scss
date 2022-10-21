@@ -38,22 +38,23 @@
     @if ($cot =="bas") {
         border-radius: 0 0 $rad $rad ;
     }
-
+// pour biseauté les bords a droite 
     @if ($cot =="right") {
         border-radius: 0 $rad $rad 0;
     }
 }
 
+// renier le texte trop long dans les titres des plats  
 @mixin cut_text() {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
 }
 
+//Boucle de retardement de l'annimation 
 @mixin annimation_card {
     @for $i from 1 through 3 {
         &:nth-child(#{$i}) {
-
             animation: fade_in 1s ease #{calc($i/2)}s 1 normal forwards;
         }
     }
