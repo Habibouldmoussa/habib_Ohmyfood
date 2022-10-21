@@ -5,13 +5,14 @@
 @import 'base/typography';
 @import 'base/reset';
 
-@import 'layout/header';
-@import 'layout/menus';
-@import 'layout/footer';
-@import 'layout/steps';
-@import 'layout/restos';
-
 @import 'components/buttons';
 @import 'components/annimations';
 
 @import 'pages/pagemenu';
+
+@import 'layout/header';
+@import 'layout/menus';
+@import 'layout/steps';
+@import 'layout/restos';
+@import 'layout/footer';
+

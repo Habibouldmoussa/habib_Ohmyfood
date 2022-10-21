@@ -42,21 +42,33 @@
             }
         }
 
+        // les puces numérotées sont positionnées en relative pour etre décalées 
+        span {
+            position: relative;
+            left: -$spaceV;
+            @include radius(30px);
+            border: 1px $color_gris solid;
+            padding: 4px 6px;
+            background-color: $color_premary;
+            color: white;
+            font-size: x-small;
+        }
+
+        i {
+            margin: 0 7px;
+        }
+
+
     }
 
-    // les puces numérotées sont positionnées en relative pour etre décalées 
-    span {
-        position: relative;
-        left: -$spaceV;
-        @include radius(30px);
-        border: 1px $color_gris solid;
-        padding: 4px 6px;
-        background-color: $color_premary;
-        color: white;
-        font-size: x-small;
+    &__step:hover {
+        animation: botton_heart 2s ease 0s 1 normal forwards;
+
+        &>i {
+            animation: rotate 2s ease 0s 1 normal forwards;
+
+        }
     }
 
-    i {
-        margin: 0 7px;
-    }
+
 }

@@ -139,25 +139,6 @@
 
 // annimation de la page d'accueil 
 // bouton 
-.steps__step:hover {
-    animation: botton_heart 2s ease 0s 1 normal forwards;
-
-    &>i {
-        animation: rotate 2s ease 0s 1 normal forwards;
-
-    }
-}
-
-.restos__post:hover {
-
-    animation: botton_heart 2s ease 0s 1 normal forwards;
-
-    & .restos--notif {
-        animation: nouveau_bounce 2s ease 0s 1 alternate none;
-    }
-
-}
-
 @keyframes botton_heart {
     0% {
         animation-timing-function: ease-out;
@@ -213,10 +194,6 @@
     90% {
         transform: translateX(-8px);
     }
-}
-
-.button_gardient:hover {
-    animation: button_shadow 1s ease 0s 1 normal forwards;
 }
 
 @keyframes button_shadow {

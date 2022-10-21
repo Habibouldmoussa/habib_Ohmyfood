@@ -25,6 +25,60 @@
             width: 23%;
             margin: 0 calc($space/10);
         }
+
+        label {
+            position: absolute;
+            bottom: $spaceV*4;
+            right: calc($space/4);
+        }
+
+        input {
+            display: none;
+
+            &:checked+label>.fa-solid {
+                background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
+                color: transparent;
+                background-clip: text;
+                animation: like_bounce 300ms ease 0s 1 normal forwards;
+            }
+
+            &:checked+label>.fa-regular {
+                opacity: 0;
+            }
+        }
+
+        input:not(:checked)+label>.fa-solid {
+            opacity: 0;
+        }
+
+        .fa-solid {
+            position: relative;
+            left: $space*5;
+            z-index: 0;
+            cursor: pointer;
+        }
+
+        .fa-regular {
+            position: relative;
+            z-index: 0;
+            cursor: pointer;
+        }
+
+        i {
+            // Positionnement des coeurs de maniere abolus    
+            font-size: $size_x2;
+            cursor: pointer;
+        }
+    }
+
+    &__post:hover {
+
+        animation: botton_heart 2s ease 0s 1 normal forwards;
+
+        & .restos--notif {
+            animation: nouveau_bounce 2s ease 0s 1 alternate none;
+        }
+
     }
 
     &__post-title {
@@ -35,6 +89,12 @@
         // La balise figure est positionnée en relatif pour que les mentions se positionnent à leurs tours par rapport à cette balises                 
         width: 100%;
         margin: 0;
+
+        figcaption {
+            position: relative;
+            line-height: 5px;
+            padding: 10px calc($space/4);
+        }
     }
 
     &__image {
@@ -58,53 +118,4 @@
         margin: 0;
     }
 
-    label {
-        position: absolute;
-        bottom: $spaceV*4;
-        right: calc($space/4);
-    }
-
-    input {
-        display: none;
-
-        &:checked+label>.fa-solid {
-            background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
-            color: transparent;
-            background-clip: text;
-            animation: like_bounce 300ms ease 0s 1 normal forwards;
-        }
-
-        &:checked+label>.fa-regular {
-            opacity: 0;
-        }
-    }
-
-    input:not(:checked)+label>.fa-solid {
-        opacity: 0;
-    }
-
-    .fa-solid {
-        position: relative;
-        left: $space*5;
-        z-index: 0;
-        cursor: pointer;
-    }
-
-    .fa-regular {
-        position: relative;
-        z-index: 0;
-        cursor: pointer;
-    }
-
-    i {
-        // Positionnement des coeurs de maniere abolus    
-        font-size: $size_x2;
-        cursor: pointer;
-    }
-
-    figcaption {
-        position: relative;
-        line-height: 5px;
-        padding: 10px calc($space/4);
-    }
 }

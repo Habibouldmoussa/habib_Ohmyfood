@@ -7,4 +7,8 @@
     @include radius(30px);
     @include shadow;
     font-size: small;
+    
+    &:hover {
+        animation: button_shadow 1s ease 0s 1 normal forwards;
+    }
 }
