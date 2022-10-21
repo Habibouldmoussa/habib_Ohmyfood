@@ -69,7 +69,7 @@
         &:checked+label>.fa-solid {
             background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
             color: transparent;
-            -webkit-background-clip: text;
+            background-clip: text;
             animation: like_bounce 300ms ease 0s 1 normal forwards;
         }
 

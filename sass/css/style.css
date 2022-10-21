@@ -299,7 +299,7 @@ footer .menu-footer i {
 .restos input:checked + label > .fa-solid {
   background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
   color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
   animation: like_bounce 300ms ease 0s 1 normal forwards;
 }
 .restos input:checked + label > .fa-regular {
@@ -608,7 +608,7 @@ footer .menu-footer i {
 .menu input:checked + label > .fa-solid {
   background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
   color: transparent;
-  -webkit-background-clip: text;
+  background-clip: text;
   animation: like_bounce 300ms ease 0s 1 normal forwards;
 }
 .menu input:checked + label > .fa-regular {
