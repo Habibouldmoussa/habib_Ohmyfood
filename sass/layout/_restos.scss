@@ -86,17 +86,19 @@
         position: relative;
         left: $space*5;
         z-index: 0;
+        cursor: pointer;
     }
 
     .fa-regular {
         position: relative;
         z-index: 0;
+        cursor: pointer;
     }
 
     i {
         // Positionnement des coeurs de maniere abolus    
         font-size: $size_x2;
-
+        cursor: pointer;
     }
 
     figcaption {

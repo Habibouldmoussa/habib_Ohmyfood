@@ -97,6 +97,7 @@ a {
   margin: 10px 0;
   line-height: 20px;
   font-size: 0.8333333333rem;
+  cursor: pointer;
 }
 .menu-post label {
   display: flex;
@@ -312,13 +313,16 @@ footer .menu-footer i {
   position: relative;
   left: 50%;
   z-index: 0;
+  cursor: pointer;
 }
 .restos .fa-regular {
   position: relative;
   z-index: 0;
+  cursor: pointer;
 }
 .restos i {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .restos figcaption {
   position: relative;
@@ -643,6 +647,7 @@ footer .menu-footer i {
 }
 .menu__heart i {
   font-size: 1.5rem;
+  cursor: pointer;
 }
 .menu__heart .fa-solid {
   position: absolute;

@@ -39,6 +39,7 @@
 
     & i {
         font-size: $size_x1;
+
     }
 
     &__wrapper {
@@ -57,6 +58,7 @@
     &__heart {
         & i {
             font-size: $size_x2;
+            cursor: pointer;
         }
         .fa-solid {
             position: absolute;

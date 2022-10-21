@@ -4,7 +4,7 @@
     margin: $spaceV 0;
     line-height: $spaceV*2.0;
     font-size: calc($size_x1/1.2);   
-    
+    cursor: pointer;
     label {
         display: flex;
         flex-flow: column wrap;
@@ -44,9 +44,10 @@
         right: 0;
         @include radius(15px, right);
         text-align: center;
-
+       
         i {
             margin-top: $spaceV*2;
+            
         }
     }
 
