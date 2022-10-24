@@ -3,8 +3,7 @@
     position: fixed;
     margin: 0px;
     background: radial-gradient(#CECECE, #fff);
-    display: flex;
-    flex-flow: column;
+    @include flex(column);
     justify-content: center;
     align-items: center;
     opacity: 1;

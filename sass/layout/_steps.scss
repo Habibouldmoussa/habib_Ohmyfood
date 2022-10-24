@@ -4,9 +4,8 @@
     margin-bottom: $spaceV*2;
 
     &__wrapper {
-        display: flex;
+        @include flex(column);
         justify-content: flex-start;
-        flex-flow: column wrap;
 
         // les boutons des steps sont agancées en ligne en desktop et en tablette 
         @include md(large) {

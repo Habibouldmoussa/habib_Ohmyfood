@@ -38,7 +38,8 @@
     @if ($cot =="bas") {
         border-radius: 0 0 $rad $rad ;
     }
-// pour biseauté les bords a droite 
+
+    // pour biseauté les bords a droite 
     @if ($cot =="right") {
         border-radius: 0 $rad $rad 0;
     }
@@ -58,4 +59,14 @@
             animation: fade_in 1s ease #{calc($i/2)}s 1 normal forwards;
         }
     }
+}
+
+@mixin icone {
+    position: absolute;
+    right: 7%;
+    top: $spaceV*2;
+}
+@mixin flex($sens) {
+    display: flex;
+    flex-flow: $sens wrap;    
 }

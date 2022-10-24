@@ -4,8 +4,7 @@
     background-color: lighten($color_gris, 5%);
 
     &__wrapper {
-        display: flex;
-        flex-flow: column;
+        @include flex(column);
 
         // Les vignettes sont agencées en ligne seulement en desktop 
         @include md(large) {
@@ -40,7 +39,7 @@
                 background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
                 color: transparent;
                 background-clip: text;
-                animation: like_bounce 300ms ease 0s 1 normal forwards;
+                animation: like_bounce 1s ease 0s 1 normal forwards;
             }
 
             &:checked+label>.fa-regular {
@@ -74,7 +73,7 @@
 
     &__post:hover {
 
-        
+
         & .restos--notif {
             animation: nouveau_bounce 1s ease 0s 1 alternate none;
         }

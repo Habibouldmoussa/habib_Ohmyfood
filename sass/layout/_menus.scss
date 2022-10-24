@@ -8,8 +8,7 @@
     cursor: pointer;
 
     label {
-        display: flex;
-        flex-flow: column wrap;
+        @include flex(column);
         justify-content: center;
         height: 59px;
         align-items: stretch;
@@ -57,7 +56,9 @@
         transition: transform 250ms;
 
         i {
+            transform: rotate();
             margin-top: $spaceV*2;
+            transition: transform 800ms;
 
         }
     }
@@ -69,6 +70,11 @@
         &:hover+label .menu-post--select {
             opacity: 1;
             transform: scalex(1);
+        }
+
+        &:hover+label .menu-post--select .fa-circle-check {
+            transform: rotate(360deg);
+
         }
 
         &:hover+label .menu-post__prix {

@@ -15,8 +15,9 @@
         font-family: Shrikhand;
         width: 85%;
         margin: $spaceV 0;
+        font-size: $size_x2;
     }
-    
+
     input {
         display: none;
 
@@ -24,7 +25,7 @@
             background: linear-gradient(200deg, #9356DC 35%, #FF79DA 65%);
             color: transparent;
             background-clip: text;
-            animation: like_bounce 300ms ease 0s 1 normal forwards;
+            animation: like_bounce 1s ease 0s 1 normal forwards;
         }
 
         &:checked+label>.fa-regular {
@@ -43,15 +44,15 @@
     }
 
     &__wrapper {
-        display: flex;
-        flex-flow: column;
+        @include flex(column);
 
         @include md(large) {
             flex-flow: row wrap;
         }
+
         section {
             opacity: 0;
-            @include annimation_card;        
+            @include annimation_card;
         }
     }
 
@@ -60,24 +61,20 @@
             font-size: $size_x2;
             cursor: pointer;
         }
+
         .fa-solid {
-            position: absolute;
-            right: 7%;
-            top: $spaceV*2;
+            @include icone;
             z-index: 0;
         }
 
         .fa-regular {
-            position: absolute;
-            right: 7%;
-            top: $spaceV*2;
+            @include icone;
             z-index: 1;
         }
     }
 
     section {
-        display: flex;
-        flex-flow: column;
+        @include flex(column);
 
         @include md(large) {
             width: 30%;
@@ -91,12 +88,13 @@
         font-weight: 500;
         margin-bottom: $spaceV - 5;
 
-        &--unederscore {
+        &::after {
+            content: "";
             width: $space;
-            background-color: $color_tertiary;
+            background-color: #99E2D0;
             height: 3px;
+            display: block;
         }
-
     }
 
     &__button {
