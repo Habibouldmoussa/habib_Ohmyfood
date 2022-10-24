@@ -29,9 +29,9 @@ restaurants car leur menu est préparé à l’avance. Plus de perte de temps à
 
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
-| Primaire | ![##9356DC](https://via.placeholder.com/10/9356DC?text=+) #9356DC |
-| Secondaire | ![#FF79DA](https://via.placeholder.com/10/FF79DA?text=+) #FF79DA |
-| Tertiaire | ![#00b48a](https://via.placeholder.com/10/99E2D0?text=+) #99E2D0 |
+| Primaire |  #9356DC |
+| Secondaire |  #FF79DA |
+| Tertiaire |  #99E2D0 |
 
 
 
