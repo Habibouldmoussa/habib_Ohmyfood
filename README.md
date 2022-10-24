@@ -1,5 +1,4 @@
 # habib_Ohmyfood.github.io 
-              ,                                   ,                           . 
 
 ![Logo](https://habibouldmoussa.github.io/habib_Ohmyfood/images/logo/ohmyfood.png)
 
