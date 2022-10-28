@@ -55,11 +55,9 @@
         transform-origin: center right;
         transition: transform 250ms;
 
-        i {
-            transform: rotate();
+        i {           
             margin-top: $spaceV*2;
             transition: transform 800ms;
-
         }
     }
 

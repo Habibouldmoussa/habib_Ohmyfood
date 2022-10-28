@@ -471,7 +471,6 @@ a {
   transition: transform 250ms;
 }
 .menu-post--select i {
-  transform: rotate();
   margin-top: 20px;
   transition: transform 800ms;
 }
